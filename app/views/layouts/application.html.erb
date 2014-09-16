@@ -7,7 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<h3> <%= session[:user_name] %> <%= link_to 'Logout', sessions_destroy_path %></h3>
+<h3> <%= if (session[:user_name])
+		 label("yolo", "olo")
+		 link_to 'Logout', sessions_destroy_path
+		 end%> <%= notice %></h3>
 <%= yield %>
 
 </body>
